@@ -7,7 +7,7 @@
 document.getElementById("btnTienLuong").onclick = function () {
     let gioLam = document.getElementById("soNgay").value
     let tongTienLuong = gioLam * 100000;
-    document.querySelector(".hienKetQua").innerHTML = `Tổng tiền lương là: ${new Intl.NumberFormat('vn').format(tongTienLuong)} VND`
+    document.querySelector(".hienKetQua").innerHTML += ` ${new Intl.NumberFormat('vn').format(tongTienLuong)} VND`
 }
 
 //bài 2 tính trung bình cộng
@@ -24,7 +24,7 @@ document.getElementById("btnTrungBinh").onclick = function () {
     let soThu5 = document.getElementById("soThu5").value * 1;
 
     let trungBinh = (soThu1 + soThu2 + soThu3 + soThu4 + soThu5) / 5
-    document.querySelector(".hienKetQua2").innerHTML = `Kết quả = ${trungBinh}`;
+    document.querySelector(".hienKetQua2").innerHTML += ` ${trungBinh}`;
 }
 
 // bài 3 đổi tiền
@@ -37,7 +37,7 @@ document.getElementById("btnQuyDoi").onclick = function () {
     let soUsd = document.getElementById("soUSD").value;
     soVnd = soUsd * 23500;
 
-    document.querySelector(".hienKetQua3").innerHTML = `Số tiền là ${new Intl.NumberFormat('vn').format(soVnd)} VND`;
+    document.querySelector(".hienKetQua3").innerHTML += ` ${new Intl.NumberFormat('vn').format(soVnd)} VND`;
 }
 
 // bài 4
@@ -52,7 +52,8 @@ document.getElementById("btnTinh").onclick = function () {
     let chuVi = (chieuDai + chieuRong) * 2;
     let dienTich = chieuDai * chieuRong;
 
-    document.querySelector(".hienKetQua4").innerHTML = `Diện tích HCN là: ${dienTich} <br> Chu vi HCN là: ${chuVi}`;
+    document.querySelector(".hienKetQuaChuVi").innerHTML += ` ${chuVi}`;
+    document.querySelector(".hienKetQuaDienTich").innerHTML += ` ${dienTich}`;
 }
 
 
@@ -66,5 +67,5 @@ document.getElementById("btnTong2So").onclick = function () {
 
     let tong2ChuSo = (so2ChuSo - (so2ChuSo%10)) / 10 + so2ChuSo % 10;
 
-    document.querySelector(".hienKetQua5").innerHTML = `Tổng 2 chữ số là: ${tong2ChuSo}`;
+    document.querySelector(".hienKetQua5").innerHTML += ` ${tong2ChuSo}`;
 }
